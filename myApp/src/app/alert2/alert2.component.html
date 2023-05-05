@@ -1,0 +1,17 @@
+<div>
+    <button style="color: brown;" (focus)="onFocus()">{{returnFocus()}}</button>
+</div>
+<div>
+    <button class="btn btn-primary"(click)="onClick()" [disabled]="allowClicking()">click Here</button>
+</div>
+<div>
+    <br/>
+    <input type="text" [(ngModel)]="userName">
+    <h1>{{userName}}</h1>
+    <button class="btn btn-primary" (click)="ifClicked()" [disabled]="!emptyUserName()">clear all</button>
+</div>
+<div  >
+    <input type="text" [(ngModel)]="userName"/>
+    <h1 *ngIf="userName !== ''">MY name is {{userName}}</h1>
+  
+  </div>
